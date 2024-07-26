@@ -1,3 +1,10 @@
 from django.shortcuts import render
+from .models import Index
 
-# Create your views here.
+
+def index(request):
+    main = Index.objects.all()
+    context = {
+        "main": main
+    }
+    return render(request, 'index.html', context)
