@@ -3,8 +3,8 @@ from .models import Index
 
 
 def index(request):
-    main = Index.objects.all()
+    main1 = Index.objects.all()
     context = {
-        "main": main
+        "main1": main1
     }
-    return render(request, 'index.html', context)
+    return render(request, 'base.html', context)
